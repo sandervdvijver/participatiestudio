@@ -3,9 +3,960 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participatiestudio</title>
+    <title>Participatie Studio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        html {
+            --scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    Test
+    <div class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#over" class="nav-link">Over</a></li>
+                <li><a href="#studios" class="nav-link">Studio’s</a></li>
+                <li><a href="#actoren" class="nav-link">Actoren</a></li>
+                <li><a href="#materiaal" class="nav-link">Materiaal</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Over -->
+            <section id="over">
+                <aside>
+                    <div class="aside-img image-container">
+                        <img src="/images/collectief_participeren.png" alt="">
+                    </div>
+                </aside>
+                <main>
+                    <h1>Over Participatie Studio</h1>
+                    <div id="over-content" class="running-text">
+                        <p>Ruimtelijk beleid grijpt in in de directe leefomgeving van mensen en zorgt dus altijd voor <strong>een zekere weerstand</strong>. Met de Participatie Studio willen we (lokale) overheden helpen om deze weerstand productief te maken. Wat doe je bijvoorbeeld met groepen met tegengestelde belangen (en met meer of minder middelen om deze belangen te verdedigen), of met burgers die zichzelf organiseren (of zich juist niet kunnen organiseren)? Wil je iedereen meekrijgen of maak je beter strategische keuzes, en hoe krijg je het doel van je project helder? Zoek je draagvlak voor een bestaand idee, of vertrek je met een open agenda? Hoe wil je alles organiseren? Hou je het liefst intern, of zoek je naar allianties met groepen met gelijkaardige ambities? En als jij er klaar voor bent, is je eigen organisatie dit dan ook?</p>
+                        <p>Er bestaan geen participatie handboeken met kant en klare antwoorden. We moeten leren uit ervaringen, door telkens net iets anders te proberen, maar ook door de tijd te nemen om samen met anderen te reflecteren over geslaagde en minder geslaagde probeersels. De Participatie Studio wil jullie hierbij ondersteunen. Participatie Studio legde in het verleden reeds <a href="#studios">trajecten</a> af in verschillende provincies en met een verscheidenheid aan <a href="#actoren">begeleiders en deelnemers</a>.</p>
+                        <p>Wil je zelf een Participatie Studio organiseren? Verzamel dan 4 organisaties met een lopend participatietraject en download samen de <a href="#materiaal">kaarten</a>. Je kan hier alleen aan beginnen, maar ze werken het beste wanneer je ze samen maakt met collega’s van een andere dienst, organisatie of overheid. Voorzie in beide gevallen voldoende tijd om tussen elke oefening wat inzichten uit te proberen. Want daar gaat het om, collectief leren participeren.</p>
+                        <p>Wil je eerst meer toelichting? Wil je dat wij met jou een participatiestudio organiseren? Neem onderaan de pagina <a href="#contact">contact</a> met ons op.</p>
+                    </div>
+                </main>
+            </section>
+            <section id="studios">
+                <aside>
+                    <nav class="toc">
+                        <h2><a href="#studio-west-vlaanderen">Studio West Vlaanderen</a></h2>
+                        <h2><a href="#studio-oost-vlaanderen">Studio Oost Vlaanderen</a></h2>
+                        <h2><a href="#gobelin">Gobelin</a></h2>
+                        <h2><a href="#studio-limburg">Studio Limburg</a></h2>
+                        <h2><a href="#studio-antwerpen">Studio Antwerpen</a></h2>
+                        <h2><a href="#studio-vlaams-brabant">Studio Vlaams Brabant</a></h2>
+                    </nav>
+                </aside>
+                <main>
+                    <h1>Studio’s</h1>
+                    <div class="studios-list">
+                    <div class="studio" id="studio-west-vlaanderen">
+                        <div class="image-container studio-image">
+                            <img src="/images/studios/hoofdbeeld-participatiestudio-WestVlaanderen.jpg" alt="">
+                        </div>
+                        <h2>Participatie Studio West Vlaanderen</h2>
+                        <div class="studio-content running-text">
+                            <p>De Participatie Studio West Vlaanderen was de tweede studio die met de oefeningenset werkte. Bijna alle deelnemers werkten aan lopende trajecten en konden de inzichten onmiddelijk toepassen. Zo ontstond een echt leercollectief.</p>
+                            <p>In deze studio werkte Kortrijk aan het participatietraject rond de ontwikkeling van de voormalig Vetex site; reflecteerde Harelbeke over het proces achter het RUP Sportsite in Bavikhove; zocht de Provincie input rond het betrekken van burgers en organisaties bij de herbestemming van de militaire basis Koksijde; en keek Oostkamp terug op het proces dat ze met bewoners van de wijk Kroonhove afgelegd hebben rond verdichting.</p>
+                            <p>De Participatie Studio West Vlaanderen liep van januari tot december 2020 en werd financieel ondersteund door het Departement Omgeving en de Provincie West Vlaanderen.</p>
+                        </div>
+                    </div>
+                    <div class="studio" id="studio-oost-vlaanderen">
+                        <div class="image-container studio-image">
+                            <img src="/images/studios/hoofdbeeld-participatiestudio-Oost-Vlaanderen.jpg" alt="">
+                        </div>
+                        <h2>Participatie Studio Oost Vlaanderen</h2>
+                        <div class="studio-content running-text">
+                            <p>De Participatie Studio Oost Vlaanderen werkte met een eerste versie van de oefeningenset. Het was ook de eerste studio met enkel lopende participatietrajecten. Dit bleek achteraf een belangrijke voorwaarde om te kunnen leren (over participatie).</p>
+                            <p>In deze studio sleutelde Aalst aan haar traject rond de ontwikkeling van de Immerzeel+ site; werkte de Provincie aan het afbakeningsproces Kleinstedelijk Gebied Beveren; herbekeek Sint Niklaas het participatieproces rond de herontwikkeling van Stationsomgeving Noord en werkte Wetteren aan het participatieproces rond een industriegebied binnen de afbakening van hun kleinstedelijk gebied.</p>
+                            <p>De Participatie Studio Oost Vlaanderen liep van december 2019 tot december 2020 en werd financieel ondersteund door het Departement Omgeving en de Provincie Oost Vlaanderen.</p>
+                        </div>
+                    </div>
+                    <div class="studio" id="gobelin">
+                        <h2>Gobelin</h2>
+                        <div class="studio-content running-text">
+                            <p>Gobelin is een onderzoeksproject rond groenblauwe netwerken in Vlaanderen. Het opzet is het beschrijven van bestaande groenblauwe netwerken en het verkennen van strategieën om deze netwerken te versterken en uit te breiden. Op vraag van de onderzoekers, onderzochten we, samen met een reeks sleutelactoren, hoe we een participatief traject konden uitzetten om de projectambities in drie cases concreet toe te passen. We gebruikten de eerste twee basisvragen om deze gesprekken te structureren.</p>
+                            <p>Onze samenwerking met het Gobelin project liep van maart tot november 2019. Gobelin is een onderzoeksproject van INBO, Universiteit Antwerpen en Cluster Landschapsarchitectuur in opdracht van Departement Omgeving.</p>
+                        </div>
+                    </div>
+                    <div class="studio" id="studio-limburg">
+                        <div class="image-container studio-image">
+                            <img src="/images/studios/hoofdbeeld-participatiestudio-limburg.jpg" alt="">
+                        </div>
+                        <h2>Participatie Studio Limburg</h2>
+                        <div class="studio-content running-text">
+                            <p>De Participatie Studio Limburg was gestructureerd rond een poster met drie basisvragen: Hoe start ik een collectief leertraject?, Hoe stuur ik een collectief leertraject?, en Hoe introduceer ik een participatiecultuur in mijn organisatie? Deze drie vragen blijven vanaf dan terugkomen in elke studio.</p>
+                            <p>In deze studio keek Houthalen-Helchteren terug op het participatieproces achter hun Beeldkwaliteitsplan Houthalen-Centrum; sleutelde de Provincie aan haar Beleidsplan Ruimte; reflecteerde Borgloon over de participatieve uitwerking van ontmoetingsplekken binnen het project ‘Dorp Aan Zet’ werkte gemeente aan de uitwerking van hun Beeldkwaliteitsplan Centrum Lanaken.</p>
+                            <p>De Participatie Studio Limburg liep van december 2018 tot mei 2019 en werd financieel ondersteund door het Departement Omgeving en de Provincie Limburg.</p>
+                        </div>
+                    </div>
+                    <div class="studio" id="studio-antwerpen">
+                        <div class="image-container studio-image">
+                            <img src="/images/studios/hoofdbeeld-participatiestudio-antwerpen.jpg" alt="">
+                        </div>
+                        <h2>Participatie Studio Antwerpen</h2>
+                        <div class="studio-content running-text">
+                            <p>De Participatie Studio Antwerpen was een studio met veel collectief overleg. We begonnen met een eigen definitie van participatie en ontwikkelden samen aan een instrument om deze definitie te vertalen in een set vragen die helpen om vat te krijgen op terugkerende participatieve situaties.</p>
+                            <p>In deze studio werkte Beerse op ‘Den Hout 2040’; reflecteerde Heist-op-den-Berg over haar project ‘Vergroen je voortuin’; keek Nijlen terug het participatietraject achter het beeldkwaliteitsplan en sleutelde de Provincie Antwerpen aan de participatieve uitwerking van haar Beleidsplan Ruimte.</p>
+                            <p>De Participatie Studio Antwerpen liep van mei tot december 2018 en werd financieel ondersteund door het Departement Omgeving en de Provincie Antwerpen.</p>    
+                        </div>
+                    </div>
+                    <div class="studio" id="studio-vlaams-brabant">
+                        <div class="image-container studio-image">
+                            <img src="/images/studios/hoofdbeeld-participatiestudio-vlaams-brabant.jpg" alt="">
+                        </div>
+                        <h2>Participatie Studio Vlaams Brabant</h2>
+                        <div class="studio-content running-text">
+                            <p>De Participatie Studio Vlaams Brabant was onze eerste studio. We introduceerden elk leerdag een vracht aan nieuwe begrippen, cases en methodes vanuit het idee dat elke deelnemer wel iets uit deze veelheid zou oppikken dat hem/haar inspireerde.</p>
+                            <p>In deze studio keek Tienen terug op ‘de Tien van Tienen’ voor; werkte Tremelo op het participatietraject achter RUP Kalvenne; werkte Zoutleeuw aan het betrekken van burgers bij de heraanleg van de Asbroekstraat en reflecteerde Interleuven over de uitwerking van de Burgemeestersconvenant Lokale Klimaatprojecten.</p>
+                            <p>De Participatie Studio Vlaams Brabant liep van januari tot juni 2018 en werd financieel ondersteund door het Departement Omgeving en Interleuven.</p>
+                        </div>
+                    </div>
+                    </div>
+                </main>
+            </section>
+            <section id="actoren">
+                <aside>
+                    <svg width="573" height="407" viewBox="0 0 573 407" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="327" width="569" height="80" rx="4" fill="white"/>
+                        <path d="M60.9455 381.018C60.9455 372.476 56.2001 367.731 50.5055 365.833V364.884C55.251 362.985 59.0473 358.24 59.0473 351.596C59.0473 338.309 49.5564 333.564 39.1164 333.564H12.5419L11.5928 334.513V399.051L12.5419 400H41.0146C51.4546 400 60.9455 395.255 60.9455 381.018ZM49.5564 351.596C49.5564 359.189 45.76 361.087 38.1673 361.087H22.0328L21.0837 360.138V343.055L22.0328 342.105H37.2182C45.76 342.105 49.5564 344.004 49.5564 351.596ZM51.4546 381.018C51.4546 388.611 47.6582 391.458 40.0655 391.458H22.0328L21.0837 390.509V370.578L22.0328 369.629H38.1673C47.6582 369.629 51.4546 372.476 51.4546 381.018Z" fill="#2C2C2C"/>
+                        <path d="M111.214 399.051V392.407L110.265 391.458H77.0467L76.0976 390.509V371.527L77.0467 370.578H108.367L109.316 369.629V362.985L108.367 362.036H77.0467L76.0976 361.087V343.055L77.0467 342.105H110.265L111.214 341.156V334.513L110.265 333.564H67.5558L66.6067 334.513V399.051L67.5558 400H110.265L111.214 399.051Z" fill="#2C2C2C"/>
+                        <path d="M146.364 341.156C156.804 341.156 162.498 345.902 164.396 352.545L165.346 353.495H172.938L173.887 352.545C171.989 343.055 164.396 332.615 146.364 332.615C126.433 332.615 115.044 346.851 115.044 366.782C115.044 386.713 126.433 400.949 145.415 400.949C153.956 400.949 159.651 398.102 164.396 393.356H165.346L166.295 399.051L167.244 400H172.938L173.887 399.051V365.833L172.938 364.884H144.466L143.516 365.833V372.476L144.466 373.425H163.447L164.396 374.375C164.396 383.865 159.651 392.407 145.415 392.407C132.127 392.407 124.535 381.967 124.535 366.782C124.535 351.596 132.127 341.156 146.364 341.156Z" fill="#2C2C2C"/>
+                        <path d="M226.061 399.051V392.407L225.112 391.458H191.894L190.945 390.509V371.527L191.894 370.578H223.214L224.163 369.629V362.985L223.214 362.036H191.894L190.945 361.087V343.055L191.894 342.105H225.112L226.061 341.156V334.513L225.112 333.564H182.403L181.454 334.513V399.051L182.403 400H225.112L226.061 399.051Z" fill="#2C2C2C"/>
+                        <path d="M276.397 399.051V392.407L275.447 391.458H244.127L243.178 390.509V334.513L242.229 333.564H234.637L233.687 334.513V399.051L234.637 400H275.447L276.397 399.051Z" fill="#2C2C2C"/>
+                        <path d="M323.855 399.051V392.407L322.906 391.458H289.688L288.738 390.509V371.527L289.688 370.578H321.008L321.957 369.629V362.985L321.008 362.036H289.688L288.738 361.087V343.055L289.688 342.105H322.906L323.855 341.156V334.513L322.906 333.564H280.197L279.248 334.513V399.051L280.197 400H322.906L323.855 399.051Z" fill="#2C2C2C"/>
+                        <path d="M340.972 399.051V334.513L340.023 333.564H332.43L331.481 334.513V399.051L332.43 400H340.023L340.972 399.051Z" fill="#2C2C2C"/>
+                        <path d="M402.64 366.782C402.64 346.851 395.048 333.564 371.32 333.564H351.39L350.44 334.513V399.051L351.39 400H371.32C395.048 400 402.64 386.713 402.64 366.782ZM393.15 366.782C393.15 382.916 388.404 391.458 370.371 391.458H360.88L359.931 390.509V343.055L360.88 342.105H370.371C388.404 342.105 393.15 350.647 393.15 366.782Z" fill="#2C2C2C"/>
+                        <path d="M452.935 399.051V392.407L451.986 391.458H418.768L417.819 390.509V371.527L418.768 370.578H450.088L451.037 369.629V362.985L450.088 362.036H418.768L417.819 361.087V343.055L418.768 342.105H451.986L452.935 341.156V334.513L451.986 333.564H409.277L408.328 334.513V399.051L409.277 400H451.986L452.935 399.051Z" fill="#2C2C2C"/>
+                        <path d="M503.27 352.545C503.27 360.138 499.474 362.985 490.932 362.985H471.001L470.052 362.036V343.055L471.001 342.105H490.932C499.474 342.105 503.27 344.953 503.27 352.545ZM512.761 352.545C512.761 339.258 504.219 333.564 490.932 333.564H461.51L460.561 334.513V399.051L461.51 400H469.103L470.052 399.051V372.476L471.001 371.527H486.186L488.085 372.476L505.168 399.051L507.066 400H510.863L511.812 399.051V392.407L498.525 371.527V370.578C507.066 368.68 512.761 362.985 512.761 352.545Z" fill="#2C2C2C"/>
+                        <path d="M566.852 381.967C566.852 368.68 557.361 363.935 544.074 362.036C530.786 360.138 526.041 358.24 526.041 350.647C526.041 344.953 530.786 341.156 539.328 341.156C551.666 341.156 555.463 344.953 555.463 352.545L556.412 353.495H564.005L564.954 352.545C564.954 338.309 554.514 332.615 540.277 332.615C523.194 332.615 516.55 342.105 516.55 350.647C516.55 362.036 525.092 367.731 538.379 369.629C551.666 371.527 557.361 373.425 557.361 381.967C557.361 389.56 550.717 392.407 542.175 392.407C530.786 392.407 524.143 388.611 524.143 379.12L523.194 378.171H515.601L514.652 379.12C514.652 393.356 525.092 400.949 541.226 400.949C559.259 400.949 566.852 392.407 566.852 381.967Z" fill="#2C2C2C"/>
+                        <rect x="0.113281" y="176.326" width="575" height="80" rx="4" transform="rotate(-17.8157 0.113281 176.326)" fill="#D3D0CC"/>
+                        <path d="M69.3282 196.273C63.2302 177.297 51.9363 166.97 29.3468 174.23L10.3717 180.328L9.75849 181.522L29.5043 242.965L30.6983 243.578L49.6734 237.48C72.2629 230.221 75.4262 215.248 69.3282 196.273ZM60.2924 199.176C65.2289 214.537 63.3244 224.121 46.1564 229.639L37.1206 232.542L35.9267 231.929L21.4077 186.75L22.0209 185.556L31.0567 182.653C48.2247 177.135 55.356 183.816 60.2924 199.176Z" fill="#2C2C2C"/>
+                        <path d="M127.084 211.606L125.051 205.281L123.857 204.668L92.2318 214.831L91.0379 214.218L85.2303 196.147L85.8435 194.953L115.662 185.37L116.275 184.176L114.242 177.851L113.048 177.238L83.2301 186.821L82.0361 186.207L76.5189 169.039L77.1321 167.845L108.757 157.682L109.371 156.488L107.338 150.163L106.144 149.55L65.4829 162.617L64.8697 163.811L84.6155 225.254L85.8095 225.867L126.47 212.8L127.084 211.606Z" fill="#2C2C2C"/>
+                        <path d="M176.812 195.625L174.78 189.3L173.586 188.687L141.96 198.85L140.766 198.237L134.959 180.166L135.572 178.972L165.39 169.389L166.003 168.195L163.971 161.87L162.777 161.257L132.959 170.839L131.765 170.226L126.247 153.058L126.861 151.864L158.486 141.701L159.099 140.507L157.066 134.182L155.872 133.569L115.211 146.636L114.598 147.83L134.344 209.273L135.538 209.886L176.199 196.819L176.812 195.625Z" fill="#2C2C2C"/>
+                        <path d="M224.734 180.225L222.701 173.9L221.507 173.287L191.689 182.869L190.495 182.256L173.363 128.945L172.169 128.332L164.94 130.655L164.327 131.849L184.073 193.292L185.267 193.905L224.12 181.419L224.734 180.225Z" fill="#2C2C2C"/>
+                        <path d="M278.952 162.801L259.206 101.358L258.012 100.745L250.783 103.068L250.17 104.262L265.27 151.248L264.366 151.538L218.545 114.425L216.447 114.102L208.315 116.715L207.702 117.909L227.448 179.353L228.642 179.966L235.87 177.643L236.484 176.449L221.384 129.463L222.288 129.172L268.109 166.286L270.206 166.608L278.339 163.995L278.952 162.801Z" fill="#2C2C2C"/>
+                        <path d="M330.498 146.236L328.465 139.911L327.272 139.298L295.646 149.461L294.452 148.848L288.645 130.776L289.258 129.582L319.076 120L319.689 118.806L317.657 112.481L316.463 111.867L286.644 121.45L285.451 120.837L279.933 103.669L280.547 102.475L312.172 92.3115L312.785 91.1175L310.752 84.7925L309.558 84.1793L268.897 97.2464L268.284 98.4403L288.03 159.884L289.224 160.497L329.885 147.43L330.498 146.236Z" fill="#2C2C2C"/>
+                        <path d="M403.72 122.705L383.974 61.2615L382.78 60.6483L372.841 63.8425L372.227 65.0364L367.706 122.316L366.803 122.606L329.759 78.6843L328.565 78.0711L318.626 81.2653L318.013 82.4592L337.759 143.903L338.952 144.516L346.181 142.193L346.794 140.999L332.856 97.627L333.76 97.3366L365.769 134.901L366.963 135.514L375.096 132.901L375.709 131.707L379.842 82.5272L380.746 82.2369L394.684 125.609L395.878 126.222L403.106 123.899L403.72 122.705Z" fill="#2C2C2C"/>
+                        <path d="M455.192 106.163L453.159 99.8383L451.965 99.2251L420.34 109.388L419.146 108.775L413.338 90.7037L413.952 89.5097L443.77 79.9272L444.383 78.7332L442.35 72.4082L441.156 71.795L411.338 81.3775L410.144 80.7643L404.627 63.5963L405.24 62.4024L436.866 52.2391L437.479 51.0451L435.446 44.7201L434.252 44.1069L393.591 57.174L392.978 58.3679L412.724 119.811L413.918 120.424L454.579 107.357L455.192 106.163Z" fill="#2C2C2C"/>
+                        <path d="M488.885 46.4877C491.208 53.7163 488.465 57.5886 480.332 60.202L461.357 66.3L460.163 65.6868L454.356 47.6152L454.969 46.4213L473.944 40.3233C482.076 37.7099 486.562 39.2591 488.885 46.4877ZM497.92 43.5839C493.855 30.9338 483.981 28.1257 471.331 32.1911L443.32 41.1929L442.706 42.3868L462.452 103.83L463.646 104.443L470.875 102.12L471.488 100.926L463.357 75.6261L463.971 74.4322L478.428 69.7861L480.525 70.1089L504.92 90.1823L507.018 90.5051L510.632 89.3436L511.245 88.1496L509.213 81.8246L490.174 66.0112L489.884 65.1076C497.435 60.687 501.115 53.5233 497.92 43.5839Z" fill="#2C2C2C"/>
+                        <path d="M558.419 55.0454C554.354 42.3953 543.866 40.7812 530.635 43.0394C517.404 45.2976 512.306 44.9423 509.983 37.7137C508.24 32.2922 511.597 27.226 519.729 24.6126C531.476 20.8376 536.251 23.2904 538.574 30.519L539.768 31.1322L546.997 28.8092L547.61 27.6153C543.255 14.0616 531.573 11.8343 518.019 16.19C501.755 21.4168 498.333 32.4853 500.947 40.6175C504.431 51.4604 514.306 54.2685 527.537 52.0103C540.768 49.7521 546.77 49.817 549.383 57.9492C551.706 65.1778 546.252 69.9212 538.12 72.5346C527.277 76.0192 519.791 74.4375 516.887 65.4018L515.693 64.7886L508.464 67.1116L507.851 68.3056C512.207 81.8592 524.469 85.8937 539.83 80.9572C556.998 75.44 561.613 64.9848 558.419 55.0454Z" fill="#2C2C2C"/>
+                        <rect x="40" y="247" width="123" height="80" rx="4" fill="#2C2C2C"/>
+                        <path d="M92.9623 319.487V312.844L92.0132 311.895H58.795L57.8459 310.946V291.964L58.795 291.015H90.115L91.0641 290.066V283.422L90.115 282.473H58.795L57.8459 281.524V263.491L58.795 262.542H92.0132L92.9623 261.593V254.949L92.0132 254H49.3041L48.355 254.949V319.487L49.3041 320.436H92.0132L92.9623 319.487Z" fill="#D3D0CC"/>
+                        <path d="M154.687 319.487V254.949L153.737 254H146.145L145.196 254.949V304.302H144.247L111.977 254.949L110.079 254H101.537L100.588 254.949V319.487L101.537 320.436H109.13L110.079 319.487V270.135H111.028L143.297 319.487L145.196 320.436H153.737L154.687 319.487Z" fill="#D3D0CC"/>
+                        <g clip-path="url(#clip0)">
+                        <path d="M413.41 223.37C439.286 223.561 460.416 202.766 460.607 176.923C460.798 151.081 439.976 129.976 414.101 129.785C388.226 129.594 367.095 150.389 366.905 176.232C366.714 202.074 387.535 223.179 413.41 223.37Z" fill="#2C2C2C"/>
+                        <path d="M353.123 327.34C378.998 327.531 400.129 306.737 400.32 280.894C400.51 255.051 379.689 233.947 353.814 233.756C327.939 233.565 306.808 254.36 306.618 280.202C306.427 306.045 327.248 327.149 353.123 327.34Z" fill="#2C2C2C"/>
+                        <path d="M473.429 327.504C499.305 327.695 520.435 306.9 520.626 281.057C520.817 255.214 499.995 234.11 474.12 233.919C448.245 233.728 427.114 254.523 426.924 280.366C426.733 306.208 447.554 327.313 473.429 327.504Z" fill="#2C2C2C"/>
+                        <path d="M350.159 282.453L413.767 172.754L477.082 282.622L350.159 282.453ZM413.754 180.384L356.778 278.652L470.467 278.801L413.754 180.384Z" fill="#2C2C2C"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="214" height="198" fill="white" transform="translate(307.733 129) rotate(0.422882)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>                        
+                </aside>
+                <main>
+                    <h1>Actoren</h1>
+                    <div class="actoren-list">
+                    <div class="actor" id="seppe-de-blust">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Seppe De Blust</h2>
+                            <div class="running-text">
+                                <p>is partner bij ndvr en onderzoeker aan de ETH Zurich. Hij was begeleider in Studio Antwerpen en Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="jan-denoo">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Jan Denoo</h2>
+                            <div class="running-text">
+                                <p>is partner bij ndvr. Hij was begeleider in Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="jan">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Oswald Devisch</h2>
+                            <div class="running-text">
+                                <p>is hoofddocent stedenbouw aan de Faculteit Architectuur en Kunst van de Universiteit Hasselt. Hij was begeleider in alle Studios.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="tim-devos">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Tim Devos</h2>
+                            <div class="running-text">
+                                <p>is partner bij ndvr en onderzoeker aan de Universiteit Gent. Hij was begeleider in Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="soetkin-goris">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Soetkin Goris</h2>
+                            <div class="running-text">
+                                <p>is agoog en partner bij Trizone. Zij was begeleider in alle Studios.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="annette-kuhk">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Annette Kuhk</h2>
+                            <div class="running-text">
+                                <p>is onderzoeker aan de KULeuven en oprichter van Humanarc. Zij was begeleider in alle Studios.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="jan-schreurs">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Jan Schreurs</h2>
+                            <div class="running-text">
+                                <p>is emeritus hoofddocent aan de KULeuven. Hij was begeleider in Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="joke-vandenabeele">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Joke Vandenabeele</h2>
+                            <div class="running-text">
+                                <p>is hoofddocent aan de Faculteit Psychologie en Pedagogische Wetenschappen van de KULeuven. Zij was klankbord in Studio Vlaams Brabant en Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="jakob-vandevoorde">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Jakob Vandevoorde</h2>
+                            <div class="running-text">
+                                <p>is partner bij ndvr. Hij was begeleider in Studio Limburg en Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="johan-thomas">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Johan Thomas</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd Omgeving in de gemeente Zoutleeuw (in 2018). Hij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="roger-mertens">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Roger Mertens</h2>
+                            <div class="running-text">
+                                <p>is lid van de gemeenteraad van de gemeente Zoutleeuw (in 2018). Hij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="marijke-tritsmans">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Marijke Tritsmans</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd Communicatie in de gemeente Tienen (in 2018). Zij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="sara-ulens">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Sara Ulens</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd Jeugddienst in de gemeente Tienen (in 2018). Zij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="karel-bloos">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Karel Bloos</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd Beleid en Organisatie in de gemeente Tienen (in 2018). Hij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="nadia-gijsemans">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Nadia Gijsemans</h2>
+                            <div class="running-text">
+                                <p>is communicatieambtenaar in de gemeente Tremelo (in 2018). Zij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="martijn-gillaerts">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Martijn Gillaerts</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij Interleuven (in 2018). Hij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="sabrina-de-donder">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Sabrina De Donder</h2>
+                            <div class="running-text">
+                                <p>is communicatiemedewerker bij Interleuven (in 2018). Zij nam deel aan de P-Studio Vlaams Brabant.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-vlaams-brabant" class="connection">Studio Vlaams Brabant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="maarten-horemans">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Maarten Horemans</h2>
+                            <div class="running-text">
+                                <p>is afdelingshoofd Ruimte in de gemeente Nijlen (in 2018). Hij nam deel aan de P-Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="tessy-gorris">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Tessy Gorris</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de gemeente Heist-op-den-Berg (in 2018). Zij nam deel aan de P-Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="elle-verwaest">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Elle Verwaest</h2>
+                            <div class="running-text">
+                                <p>is coördinator Ontspanning en Ontwikkeling in de gemeente Beerse (in 2018). Zij nam deel aan de P-Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor"id="hanne-jacobs">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Hanne Jacobs</h2>
+                            <div class="running-text">
+                                <p>is medewerker communicatie bij de Stadsregio Turnhout (in 2018). Zij nam deel aan de P-Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="katrijn-vercammen">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Katrijn Vercammen</h2>
+                            <div class="running-text">
+                                <p>is adviseur communicatie & participatie bij de Provincie Antwerpen (in 2018). Zij nam deel aan de P-Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="kathleen-verhaert">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Katleen Verhaert</h2>
+                            <div class="running-text">
+                                <p>is communicatieconsulente Dienst Gebiedsgericht Beleid bij de Provincie Antwerpen (in 2018). Zij nam deel aan de P-Studio Antwerpen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-antwerpen" class="connection">Studio Antwerpen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="patricia-kusters">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Patricia Kusters</h2>
+                            <div class="running-text">
+                                <p>is stedenbouwkundig ambtenaar bij de gemeente Lanaken (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="danielle-starren">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Danielle Starren</h2>
+                            <div class="running-text">
+                                <p>is Afdelingshoofd Leefomgeving bij de gemeente Lanaken (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="ruth-stevens">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Ruth Stevens</h2>
+                            <div class="running-text">
+                                <p>is stedenbouwkundig ambtenaar bij de gemeente Borgloon (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="els-aernauts">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Els Arnauts</h2>
+                            <div class="running-text">
+                                <p>is sectorcoördinator ruimte bij de gemeente Borgloon (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="freija-bas">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Freija Bas</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd Ruimte bij de gemeente Houthalen-Helchteren (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="bertien-buntinx">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Bertien Buntinx</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de gemeente Houthalen-Helchteren (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="jo-schoefs">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Jo Schoefs</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie Limburg (in 2019). Hij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="koen-indesteege">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Koen Indesteege</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie Limburg (in 2019). Hij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="martine-baptist">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Martine Baptist</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie Limburg (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="griet-maes">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Griet Maes</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie Limburg (in 2019). Zij nam deel aan de P-Studio Limburg.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-limburg" class="connection">Studio Limburg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="lieselot-cole">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Lieselot Cole</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de gemeente Aalst (in 2019). Zij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="sam-de-coster">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Sam De Coster</h2>
+                            <div class="running-text">
+                                <p>is duurzaamheidsambtenaar bij de gemeente Aalst (in 2019). Hij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="bart-van-lokeren">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Bart Van Lokeren</h2>
+                            <div class="running-text">
+                                <p>is beleidsadviseur plannen en ontwikkelen bij de gemeente Sint-Niklaas (in 2019). Hij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="els-van-gyseghem">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Els Van Gyseghem</h2>
+                            <div class="running-text">
+                                <p>is omgevingsambtenaar bij de gemeente Wetteren (in 2019). Zij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="davina-de-palmenaer">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Davina De Palmenaer</h2>
+                            <div class="running-text">
+                                <p>is beleidsmedewerker participatie bij de Provincie Oost Vlaanderen (in 2019). Zij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="barbara-smitz">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Barbara Smitz</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie Oost Vlaanderen (in 2019). Zij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="reinout-debergh">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Reinout Debergh</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd ruimtelijke planning bij de Provincie Oost Vlaanderen (in 2019). Hij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="patrick-wohlmutter">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Patrick Wohlmutter</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie Oost Vlaanderen (in 2019). Hij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="angelique-vandekerckhove">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Angelique Vandekerckhove</h2>
+                            <div class="running-text">
+                                <p>is beleidsmedewerker participatie bij de Provincie Oost Vlaanderen (in 2019). Zij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="karen-dhollander">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Karen Dhollander</h2>
+                            <div class="running-text">
+                                <p>is beleidsmedewerker dienst Ruimtelijke Planning bij de Provincie Oost Vlaanderen (in 2019). Zij nam deel aan de P-Studio Oost Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-oost-vlaanderen" class="connection">Studio Oost-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="nele-cools">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Nele Cools</h2>
+                            <div class="running-text">
+                                <p>is diensthoofd Communicatie bij de gemeente Oostkamp (in 2020). Zij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="cindy-deprez">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Cindy Deprez</h2>
+                            <div class="running-text">
+                                <p>is omgevingsambtenaar bij de gemeente Harelbeke (in 2020). Zij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="julie-vervaeke">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Julie Vervaeke</h2>
+                            <div class="running-text">
+                                <p>is medewerker communicatie bij de gemeente Harelbeke (in 2020). Zij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="barbara-deman">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Barbara Deman</h2>
+                            <div class="running-text">
+                                <p>is gebiedswerker bij de gemeente Kortrijk (in 2020). Zij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="michelle-janssens">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Michelle Janssens</h2>
+                            <div class="running-text">
+                                <p>is participatie- en communicatieverantwoordelijke bij de Provincie West Vlaanderen (in 2020). Zij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="wouter-billiet">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Wouter Billiet</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie West Vlaanderen (in 2020). Hij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor" id="lissa-van-doorsselaere">
+                        <div class="image-container actor-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="actor-info">
+                            <h2>Lissa Van Doorsselaere</h2>
+                            <div class="running-text">
+                                <p>is ruimtelijk planner bij de Provincie West Vlaanderen (in 2020). Zij nam deel aan de P-Studio West Vlaanderen.</p>
+                            </div>
+                            <div class="connections">
+                                <a href="#studio-west-vlaanderen" class="connection">Studio West-Vlaanderen</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </main>
+            </section>
+            <section id="materiaal">
+                <aside>
+                    <svg width="523" height="378" viewBox="0 0 523 378" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M163.552 2.98682C165.021 1.33725 167.55 1.1912 169.199 2.66062L519.404 314.618C521.054 316.088 521.2 318.616 519.73 320.266L471.839 374.029C470.37 375.678 467.841 375.824 466.192 374.355L115.987 62.397C114.337 60.9276 114.191 58.3992 115.661 56.7496L163.552 2.98682Z" fill="#0FBA78"/>
+                        <path d="M175.691 104.935L218.619 56.7445L218.542 55.4045L210.746 48.4603L209.406 48.5377L157.754 73.7046L157.045 73.0734L176.098 18.8669L176.02 17.5269L168.225 10.5827L166.885 10.6601L123.957 58.8511L124.034 60.1911L129.704 65.2414L131.044 65.164L161.346 31.1469L162.055 31.7782L145.926 78.4212L146.004 79.7612L152.382 85.4428L153.722 85.3654L198.198 63.9741L198.907 64.6054L168.604 98.6226L168.682 99.9625L174.351 105.013L175.691 104.935Z" fill="white"/>
+                        <path d="M220.314 144.685L224.733 139.724L246.233 81.3427L246.156 80.0027L239.778 74.3211L238.438 74.3985L182.92 102.478L178.501 107.438L178.579 108.778L182.831 112.566L184.171 112.489L197.892 105.646L199.941 106.2L219.076 123.245L219.862 125.216L214.644 139.634L214.722 140.974L218.974 144.762L220.314 144.685ZM223.971 114.895L222.631 114.973L207.749 101.716L207.671 100.376L233.143 87.4766L233.852 88.1079L223.971 114.895Z" fill="white"/>
+                        <path d="M292.862 131.776L297.281 126.815L297.204 125.475L258.935 91.3857L257.595 91.4631L253.175 96.4239L253.253 97.7639L268.135 111.021L268.213 112.361L230.967 154.174L231.044 155.514L236.713 160.564L238.053 160.487L275.3 118.674L276.64 118.597L291.522 131.854L292.862 131.776Z" fill="white"/>
+                        <path d="M290.469 207.178L294.888 202.217L294.811 200.877L270.006 178.782L269.929 177.442L282.555 163.268L283.895 163.19L307.282 184.023L308.622 183.946L313.041 178.985L312.963 177.645L289.576 156.812L289.499 155.472L301.494 142.007L302.834 141.93L327.638 164.025L328.978 163.948L333.397 158.987L333.319 157.647L301.428 129.239L300.088 129.316L257.16 177.507L257.238 178.847L289.129 207.255L290.469 207.178Z" fill="white"/>
+                        <path d="M358.988 205.933C353.937 211.602 349.209 211.203 342.831 205.521L327.948 192.264L327.871 190.924L340.497 176.75L341.837 176.673L356.719 189.93C363.097 195.612 364.038 200.263 358.988 205.933ZM366.075 212.246C374.913 202.324 372.322 192.39 362.401 183.552L340.431 163.982L339.091 164.059L296.163 212.25L296.241 213.59L301.91 218.641L303.25 218.563L320.926 198.72L322.266 198.642L333.605 208.743L334.392 210.714L329.472 241.921L330.258 243.892L333.093 246.417L334.433 246.34L338.852 241.379L342.818 216.95L343.45 216.241C351.091 220.505 359.13 220.041 366.075 212.246Z" fill="white"/>
+                        <path d="M346.475 257.067L389.403 208.876L389.325 207.536L383.656 202.486L382.316 202.563L339.388 250.754L339.465 252.094L345.135 257.145L346.475 257.067Z" fill="white"/>
+                        <path d="M391.106 296.824L395.525 291.863L417.025 233.482L416.948 232.142L410.57 226.46L409.23 226.537L353.712 254.617L349.293 259.577L349.37 260.917L353.623 264.705L354.963 264.628L368.684 257.785L370.733 258.339L389.867 275.384L390.654 277.355L385.436 291.773L385.514 293.113L389.766 296.901L391.106 296.824ZM394.763 267.035L393.423 267.112L378.54 253.855L378.463 252.515L403.935 239.616L404.644 240.247L394.763 267.035Z" fill="white"/>
+                        <path d="M435.391 336.272L439.81 331.311L461.31 272.93L461.233 271.59L454.854 265.908L453.514 265.986L397.997 294.065L393.578 299.026L393.655 300.366L397.907 304.154L399.247 304.076L412.969 297.234L415.018 297.787L434.152 314.832L434.938 316.804L429.721 331.222L429.799 332.562L434.051 336.35L435.391 336.272ZM439.048 306.483L437.708 306.56L422.825 293.303L422.748 291.963L448.22 279.064L448.928 279.695L439.048 306.483Z" fill="white"/>
+                        <path d="M470.108 367.198L474.527 362.237L474.45 360.897L451.063 340.065L450.986 338.725L488.232 296.912L488.155 295.572L482.485 290.521L481.145 290.599L438.217 338.79L438.295 340.13L468.768 367.275L470.108 367.198Z" fill="white"/>
+                        <path d="M16.7549 353.523L162.341 139.523L308.755 353.523H16.7549Z" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M235.755 248.523L162.463 353.523L88.7549 248.523L235.755 248.523Z" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M72.4321 229.188H108.16V265.211H72.4321V229.188Z" fill="#EA4649" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M217.145 229.188H252.872V265.211H217.145V229.188Z" fill="#EA4649" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M288.527 335.323H324.255V371.346H288.527V335.323Z" fill="#EA4649" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M145.014 335.323H180.742V371.346H145.014V335.323Z" fill="#EA4649" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M1.5 335.323H37.2278V371.346H1.5V335.323Z" fill="#EA4649" stroke="#EA4649" stroke-width="3"/>
+                        <path d="M145.014 122.5H180.742V158.523H145.014V122.5Z" fill="#EA4649" stroke="#EA4649" stroke-width="3"/>
+                        </svg>
+                        
+                </aside>
+                <main>
+                    <h1>Materiaal</h1>
+                    <div class="tools-list">
+                    <div class="tool" id="oefeningen">
+                        <div class="tool-image image-container"><img src="" alt=""></div>
+                        <h2>Oefeningen</h2>
+                        <div class="tool-description running-text">
+                            <p>We leren uit ervaringen, ten minste als we de tijd nemen om hierover te reflecteren. Deze drie oefeningen reeksen helpen om deze reflecties te structureren. De eerste oefeningenreeks gaat in op de vraag ‘hoe sleutel ik aan een leercollectief?’ Ze maakt komaf met de fixatie op representativiteit en zet in op dynamische collectieven. De tweede oefeningenreeks gaat in op de vraag ‘hoe stuur ik een leercollectief?’ Ze helpt om te anticiperen op weerstand door voortdurend te investeren in zelfevaluatie en in strategische allianties. De derde oefeningenreeks gaat in op de vraag ‘hoe versterk ik de participatiecultuur van mijn organisatie?’ door te denken vanuit rollen, regels en instrumenten.</p>
+                        </div>
+                        <div class="tool-download">
+                            <a class="download-link" href="">Oefeningen.pdf</a>
+                        </div>
+                    </div>
+                    <div class="tool" id="begrippen">
+                        <div class="tool-image image-container"><img src="" alt=""></div>
+                        <h2>Begrippen</h2>
+                        <div class="tool-description running-text">
+                            <p>Er bestaan heel wat publicaties over participatie, met telkens eigen begrippen. Deze set kaarten beschrijft die begrippen die aan de basis liggen van de oefeningen reeksen. Op de voorkant staat telkens een figuur, gemaakt door de auteurs van de begrippen, op de achterkant een kernachtige definitie en een verwijzing naar de publicatie waarin het begrip geïntroduceerd is.</p>
+                        </div>
+                        <div class="tool-download">
+                            <a class="download-link" href="">Begrippen.pdf</a>
+                        </div>
+                    </div>
+                    <div class="tool" id="verhaal">
+                        <div class="tool-image image-container"><img src="" alt=""></div>
+                        <h2>Verhaal</h2>
+                        <div class="tool-description running-text">
+                            <p>Participatie dekt vele ladingen, van het zoeken naar draagvlak tot het faciliteren van zelfbeheer. Deze set kaarten benadert participatieprocessen als collectieve leerprocessen, als trajecten waarbinnen een groep mensen zich samen organiseert om te leren over een specifiek onderwerp om zo een proces van verandering in gang te zetten.</p>
+                            <p>Deze benadering heeft een aantal consequenties. Zo hebben we het niet over communicatietrajecten, bevragingen, infomarkten, charettes, enz., maar over een dynamisch proces van samen proberen, samen reflecteren, beslissen om een andere weg uit te gaan, terug proberen, aan te sluiten bij een andere groep, enz. De kaartenset probeert deze consequenties te beschrijven, vanuit het perspectief van een individu dat zo’n collectief leertraject wil opstarten (kaarten 1 tot 12) én vanuit het perspectief van een individu dat in zo’n collectief leertraject zit (kaarten 12 tot 4).</p>
+                        </div>
+                        <div class="tool-download">
+                            <a class="download-link" href="">Verhaal.pdf</a>
+                        </div>
+                    </div>
+                    </div>
+                </main>
+            </section>
+            <section id="contact">
+                <aside>Contact aside</aside>
+                <main>
+                    <h1>Zelf een studio organiseren?</h1>
+                    <div class="running-text">
+                        <p>Wil je eerst wat uitleg? Wil je dat wij een Participatie Studio voor je organiseren? Neem dan contact op met <a href="mailto:oswald.devisch@uhasselt.be">oswald.devisch@uhasselt.be</a>.</p>
+                    </div>
+                </main>
+            </section>
+        </main>
+    </div>
+
+    <script src="zenscroll-min.js"></script>
 </body>
 </html>

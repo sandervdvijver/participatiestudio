@@ -1,0 +1,166 @@
+html {
+    font-size: 10px;
+}
+
+// Variables
+$mrg: 2rem;
+
+// Colors
+$main:#2C2C2C;
+$grey:#7B7B7B;
+$lightgrey:#D3D0CC;
+$bg: #EEEEEE;
+$white:#FFFFFF;
+$green:#0FBA78;
+$red:#EA4649;
+$blue:#1FA9D7;
+
+// Typography
+
+
+/* Main */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $main;
+    background-color: $bg;
+    margin: 0;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+a, a:visited {
+    color: $main;
+    text-decoration: none;
+}
+
+/* SVG */
+svg {
+    width: 100%;
+    height: auto;
+    .st0{
+        fill:$blue;
+    }
+    .st1{
+        fill:$red;
+    }
+    .st2{
+        fill:$green;
+    }
+}
+
+section {
+    // background-color: $green;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    aside {
+        align-self: flex-end;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: $mrg;
+        margin: $mrg;
+        width: 45%;
+    }
+    main {
+        width: 55%;
+        align-self: flex-end;
+        min-width: 66ch;
+        margin: $mrg;
+    }
+}
+
+.image-container {
+    max-width: 100%;
+    height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+div.running-text {
+    margin-top: $mrg;
+    p {
+        margin-bottom: $mrg;
+        margin-top: 0;
+    }
+}
+
+nav.main-nav {
+    z-index: 99;
+    position: fixed;
+    left: $mrg;
+    top: $mrg;
+}
+
+nav.main-nav ul {
+    display: inline;
+    padding: 0;
+    li {
+        background-color: $white;
+        display: inline;
+        padding: 0 $mrg/2;
+        border-radius: $mrg;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+/* Actoren */
+.actoren-list {
+    .actor {
+        .actor-image {
+        }
+        .actor-info > div {
+            // display: none;
+        }
+    }
+}
+
+/* Studios */
+section#studios {
+    aside {
+        h2 {
+           font-size: 4.2rem;
+        }
+    }
+}
+.studios-list {
+    .studio-image {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56%;
+        overflow: hidden;
+        position: relative;
+        background-color: rgba(black,0.1);
+        margin-bottom: $mrg;
+        img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/* Contact */
+section#contact {
+    min-height: 50vh;
+    main {
+        // align-self: flex-start;
+    }
+}
