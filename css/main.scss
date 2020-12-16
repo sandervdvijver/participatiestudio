@@ -4,6 +4,7 @@ html {
 
 // Variables
 $mrg: 2rem;
+$lh: 1.2;
 
 // Colors
 $main:#2C2C2C;
@@ -14,6 +15,12 @@ $white:#FFFFFF;
 $green:#0FBA78;
 $red:#EA4649;
 $blue:#1FA9D7;
+
+// Screen sizes
+$xs: 500px;
+$s: 1000px;
+$m: 1200px;
+$l: 1400px;
 
 /* Typography */
 @import url('https://rsms.me/inter/inter.css');
@@ -28,12 +35,19 @@ body {
     background-color: $bg;
     margin: 0;
     font-size: 2rem;
+    letter-spacing: -0.017;
+    line-height: $lh;
     font-family: 'Inter',sans-serif;
 }
 
 h1, h2, h3, h4 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 6rem;
 }
 
 h2 {
@@ -43,6 +57,15 @@ h2 {
 a, a:visited {
     color: $main;
     text-decoration: none;
+}
+
+.running-text a {
+    color: $grey;
+    // background-color: $white;
+}
+
+strong {
+    font-weight: 600;
 }
 
 /* SVG */
@@ -63,25 +86,33 @@ svg {
     }
 }
 
+/* Section layout */
 section {
     // background-color: $green;
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
     aside {
+        // background-color: rgba($red,0.1);
         align-self: flex-end;
         position: -webkit-sticky;
         position: sticky;
         bottom: $mrg;
         margin: 0 $mrg;
-        width: 45%;
+        max-width: 50%;
+        width: 44%;
     }
     main {
-        width: 55%;
+        // background-color: rgba($green,0.1);
+        padding-top: $mrg;
+        width: 45%;
         align-self: flex-end;
-        min-width: 66ch;
-        // max-width: 66ch;
+        max-width: 50%;
         margin: 0 $mrg;
+        margin-right: $mrg*2;
+        h1 {
+            margin-bottom: $mrg*4;
+        }
     }
 }
 
@@ -96,13 +127,19 @@ section {
 
 div.running-text {
     margin-top: $mrg;
+    // max-width: 56ch;
     p {
         margin-bottom: $mrg;
         margin-top: 0;
     }
 }
 
+/* Main nav */
 nav.main-nav {
+    max-width: 45%;
+    line-height: 1.5;
+    font-size: 3.2rem;
+    font-weight: 500;
     z-index: 99;
     position: fixed;
     left: $mrg;
@@ -110,19 +147,49 @@ nav.main-nav {
     a.active {
         color: $red;
     }
+    a:active {
+        background-color: $lightgrey;
+        color: $main;
+    }
+    ul {
+        display: inline;
+        padding: 0;
+        li {
+            display: inline;
+            a {
+                white-space: nowrap;
+                background-color: $white;
+                padding: 0 $mrg/2;
+                border-radius: $mrg;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
-nav.main-nav ul {
-    display: inline;
-    padding: 0;
-    li {
-        background-color: $white;
-        display: inline;
-        padding: 0 $mrg/2;
-        border-radius: $mrg;
-        a {
-            text-decoration: none;
+/* General media queries */
+@media screen and (max-width: $s) {
+    section {
+        display: initial;
+        aside, main {
+            width: 100%;
+            max-width: 100%;
         }
+        main {
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        aside {
+            padding-top: $mrg * 5;
+            svg {
+                width: 75%;
+                margin: 0 auto;
+            }
+        }
+    }
+    nav.main-nav {
+        max-width: 100%;
     }
 }
 
@@ -222,8 +289,10 @@ section#materiaal {
 section#contact {
     // min-height: 50vh;
     main {
-        align-self: flex-start;
+        // align-self: flex-start;
         display: flex;
+        flex-direction: column;
+        
     }
 }
 
@@ -231,7 +300,8 @@ section#contact {
 .colophon {
     font-size: 1.4rem;
     display: flex;
-    align-items: center
+    flex-direction: row;
+    align-items: center;
     .running-text {
         width: 60%;
     }

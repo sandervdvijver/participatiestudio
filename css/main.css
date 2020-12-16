@@ -15,12 +15,19 @@ body {
   background-color: #EEEEEE;
   margin: 0;
   font-size: 2rem;
+  letter-spacing: -0.017;
+  line-height: 1.2;
   font-family: 'Inter',sans-serif;
 }
 
 h1, h2, h3, h4 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 6rem;
 }
 
 h2 {
@@ -30,6 +37,14 @@ h2 {
 a, a:visited {
   color: #2C2C2C;
   text-decoration: none;
+}
+
+.running-text a {
+  color: #7B7B7B;
+}
+
+strong {
+  font-weight: 600;
 }
 
 /* SVG */
@@ -53,6 +68,7 @@ svg .st2 {
   fill: #0FBA78;
 }
 
+/* Section layout */
 section {
   min-height: 100vh;
   display: -webkit-box;
@@ -70,15 +86,22 @@ section aside {
   position: sticky;
   bottom: 2rem;
   margin: 0 2rem;
-  width: 45%;
+  max-width: 50%;
+  width: 44%;
 }
 
 section main {
-  width: 55%;
+  padding-top: 2rem;
+  width: 45%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  min-width: 66ch;
+  max-width: 50%;
   margin: 0 2rem;
+  margin-right: 4rem;
+}
+
+section main h1 {
+  margin-bottom: 8rem;
 }
 
 .image-container {
@@ -100,7 +123,12 @@ div.running-text p {
   margin-top: 0;
 }
 
+/* Main nav */
 nav.main-nav {
+  max-width: 45%;
+  line-height: 1.5;
+  font-size: 3.2rem;
+  font-weight: 500;
   z-index: 99;
   position: fixed;
   left: 2rem;
@@ -111,20 +139,50 @@ nav.main-nav a.active {
   color: #EA4649;
 }
 
+nav.main-nav a:active {
+  background-color: #D3D0CC;
+  color: #2C2C2C;
+}
+
 nav.main-nav ul {
   display: inline;
   padding: 0;
 }
 
 nav.main-nav ul li {
-  background-color: #FFFFFF;
   display: inline;
-  padding: 0 1rem;
-  border-radius: 2rem;
 }
 
 nav.main-nav ul li a {
+  white-space: nowrap;
+  background-color: #FFFFFF;
+  padding: 0 1rem;
+  border-radius: 2rem;
   text-decoration: none;
+}
+
+/* General media queries */
+@media screen and (max-width: 1000px) {
+  section {
+    display: initial;
+  }
+  section aside, section main {
+    width: 100%;
+    max-width: 100%;
+  }
+  section main h1 {
+    margin-bottom: 0;
+  }
+  section aside {
+    padding-top: 10rem;
+  }
+  section aside svg {
+    width: 75%;
+    margin: 0 auto;
+  }
+  nav.main-nav {
+    max-width: 100%;
+  }
 }
 
 /* Actoren */
@@ -212,12 +270,26 @@ section#materiaal .download-link:hover:after {
 }
 
 /* Contact */
+section#contact main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /* Colophon */
 .colophon {
   font-size: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
