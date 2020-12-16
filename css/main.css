@@ -1,7 +1,10 @@
+@charset "UTF-8";
+@import url("https://rsms.me/inter/inter.css");
 html {
   font-size: 10px;
 }
 
+/* Typography */
 /* Main */
 html {
   scroll-behavior: smooth;
@@ -12,7 +15,7 @@ body {
   background-color: #EEEEEE;
   margin: 0;
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: 'Inter',sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -31,6 +34,9 @@ a, a:visited {
 
 /* SVG */
 svg {
+  display: block;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: auto;
 }
@@ -63,7 +69,7 @@ section aside {
   position: -webkit-sticky;
   position: sticky;
   bottom: 2rem;
-  margin: 2rem;
+  margin: 0 2rem;
   width: 45%;
 }
 
@@ -72,7 +78,7 @@ section main {
   -ms-flex-item-align: end;
       align-self: flex-end;
   min-width: 66ch;
-  margin: 2rem;
+  margin: 0 2rem;
 }
 
 .image-container {
@@ -101,6 +107,10 @@ nav.main-nav {
   top: 2rem;
 }
 
+nav.main-nav a.active {
+  color: #EA4649;
+}
+
 nav.main-nav ul {
   display: inline;
   padding: 0;
@@ -118,9 +128,50 @@ nav.main-nav ul li a {
 }
 
 /* Actoren */
+.actoren-list .actor {
+  border-bottom: 2px solid #D3D0CC;
+}
+
+.actoren-list .actor .actor-image img {
+  display: none;
+  width: 20px;
+  height: 20px;
+  background-color: #7B7B7B;
+}
+
+.actoren-list .actor .actor-info h2 {
+  cursor: pointer;
+}
+
+.actoren-list .actor .actor-info h2:after {
+  color: #D3D0CC;
+  content: " +";
+  float: right;
+}
+
+.actoren-list .actor .actor-info h2:hover:after {
+  color: #2C2C2C;
+}
+
+.actoren-list .actor:not(.selected) .actor-image {
+  display: none;
+}
+
+.actoren-list .actor:not(.selected) .actor-info > div {
+  display: none;
+}
+
+.actoren-list .actor.selected .actor-info h2:after {
+  content: " −";
+}
+
 /* Studios */
-section#studios aside h2 {
+section#studios .studios-nav h2 {
   font-size: 4.2rem;
+}
+
+section#studios .studios-nav .active {
+  color: #EA4649;
 }
 
 .studios-list .studio-image {
@@ -142,8 +193,48 @@ section#studios aside h2 {
      object-fit: cover;
 }
 
+/* Materiaal */
+section#materiaal .download-link {
+  display: inline-block;
+  background-color: #FFFFFF;
+  border-radius: .5ch;
+  padding: 1.33333rem;
+}
+
+section#materiaal .download-link:after {
+  content: "";
+  color: #D3D0CC;
+  margin-left: 1ch;
+}
+
+section#materiaal .download-link:hover:after {
+  color: inherit;
+}
+
 /* Contact */
-section#contact {
-  min-height: 50vh;
+/* Colophon */
+.colophon {
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.colophon .running-text {
+  width: 60%;
+}
+
+.colophon .logos-container .logo {
+  display: inline-block;
+  height: 5rem;
+}
+
+.colophon .logos-container .logo img {
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: auto;
 }
 /*# sourceMappingURL=main.css.map */

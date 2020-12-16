@@ -15,8 +15,8 @@ $green:#0FBA78;
 $red:#EA4649;
 $blue:#1FA9D7;
 
-// Typography
-
+/* Typography */
+@import url('https://rsms.me/inter/inter.css');
 
 /* Main */
 html {
@@ -28,7 +28,7 @@ body {
     background-color: $bg;
     margin: 0;
     font-size: 2rem;
-    font-family: sans-serif;
+    font-family: 'Inter',sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -47,6 +47,9 @@ a, a:visited {
 
 /* SVG */
 svg {
+    display: block;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: auto;
     .st0{
@@ -70,14 +73,15 @@ section {
         position: -webkit-sticky;
         position: sticky;
         bottom: $mrg;
-        margin: $mrg;
+        margin: 0 $mrg;
         width: 45%;
     }
     main {
         width: 55%;
         align-self: flex-end;
         min-width: 66ch;
-        margin: $mrg;
+        // max-width: 66ch;
+        margin: 0 $mrg;
     }
 }
 
@@ -103,6 +107,9 @@ nav.main-nav {
     position: fixed;
     left: $mrg;
     top: $mrg;
+    a.active {
+        color: $red;
+    }
 }
 
 nav.main-nav ul {
@@ -122,19 +129,55 @@ nav.main-nav ul {
 /* Actoren */
 .actoren-list {
     .actor {
+        border-bottom: 2px solid $lightgrey;
         .actor-image {
+            img {
+                display: none;
+                width: 20px;
+                height: 20px;
+                background-color: $grey;
+            }
+        }
+        .actor-info h2 {
+            cursor: pointer;
+            &:after {
+                color: $lightgrey;
+                content:" +";
+                float: right;
+            }
+            &:hover:after {
+                color: $main;
+            }
         }
         .actor-info > div {
             // display: none;
+        }
+    }
+    .actor:not(.selected) {
+        .actor-image {
+            display: none;
+        }
+        .actor-info > div {
+            display: none;
+        }
+    }
+    .actor.selected {
+        .actor-info h2 {
+            &:after {
+                content:" −";
+            }
         }
     }
 }
 
 /* Studios */
 section#studios {
-    aside {
+    .studios-nav {
         h2 {
            font-size: 4.2rem;
+        }
+        .active {
+            color: $red;
         }
     }
 }
@@ -157,10 +200,50 @@ section#studios {
     }
 }
 
+/* Materiaal */
+section#materiaal {
+    .download-link {
+        display: inline-block;
+        background-color: $white;
+        border-radius: .5ch;
+        padding: $mrg/1.5;
+        &:after {
+            content:"";
+            color: $lightgrey;
+            margin-left: 1ch;
+        }
+        &:hover:after {
+            color: inherit;
+        }
+    }
+}
+
 /* Contact */
 section#contact {
-    min-height: 50vh;
+    // min-height: 50vh;
     main {
-        // align-self: flex-start;
+        align-self: flex-start;
+        display: flex;
+    }
+}
+
+/* Colophon */
+.colophon {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center
+    .running-text {
+        width: 60%;
+    }
+    .logos-container {
+        .logo {
+            display: inline-block;
+            height: $mrg*2.5;
+            img{
+                mix-blend-mode: multiply;
+                height: 100%;
+                width: auto;
+            }
+        }
     }
 }
