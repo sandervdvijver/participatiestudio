@@ -217,7 +217,7 @@ section main {
 
 section main h1 {
   min-height: 24vh;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 section main > div > div {
@@ -477,7 +477,7 @@ section#studios .studios-list .studio .studio-image {
   padding-bottom: 50%;
   overflow: hidden;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #D3D0CC;
   margin-bottom: 2rem;
 }
 
@@ -488,6 +488,15 @@ section#studios .studios-list .studio .studio-image img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+
+section#studios .studios-list .studio .studio-image img:hover {
+  mix-blend-mode: normal;
+  -webkit-filter: none;
+          filter: none;
 }
 
 section#studios .studios-list .studio .studio-content {
@@ -768,7 +777,7 @@ section#contact main {
 }
 
 .colophon .running-text {
-  width: 60%;
+  width: 66%;
   margin: 0;
 }
 
