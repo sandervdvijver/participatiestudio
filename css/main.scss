@@ -90,18 +90,18 @@ h2 {
     font-weight: inherit;
 }
 
-a, a:visited {
-    color: $main;
+a {
+    color: $grey;
+    transition: color .3s ease;
     text-decoration: none;
+}
+
+a:hover {
+    color: $main !important;
 }
 
 .running-text a {
     color: $main;
-    background-color: $white;
-    border-radius: .7rem;
-    padding: 0 .3rem;
-    white-space: nowrap;
-    // background-color: $white;
 }
 
 a[rel~="external"]:before {
@@ -133,6 +133,9 @@ div.running-text {
         margin-bottom: $mrg;
         margin-top: 0;
     }
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .aside-text {
@@ -161,10 +164,30 @@ svg {
     }
 }
 
+/* hacky: reverse */
+body.reverse {
+    section {
+        flex-direction: row-reverse;
+        aside {
+            margin-right: 0;
+            margin-left: $mrg/2;
+        }
+        main {
+            margin-left: 0;
+            margin-right: $mrg/2;
+        }
+    }
+    nav.main-nav {
+        right: $mrg*1.5;
+        left: inherit;
+        text-align: right;
+    }
+}
+
 /* Section layout */
 section {
     // background-color: rgba($blue,0.1);
-    min-height: 100vh;
+    // min-height: 100vh;
     padding-top: $mrg;
     display: flex;
     aside {
@@ -186,6 +209,9 @@ section {
         h1 {
             min-height: 24vh;
             margin-bottom: $mrg*2;
+        }
+        > div > div {
+            margin-bottom: $mrg/1.2;
         }
     }
 }
@@ -214,6 +240,9 @@ nav.main-nav {
         padding: 0;
         li {
             list-style-type: none;
+            a {
+                color: $main;
+            }
             a.active {
                 color: $red;
                 border-bottom: 2px solid $red;
@@ -378,6 +407,18 @@ section#over {
         h1 {
             min-height: 24vh;
         }
+        .running-text {
+            a {
+                background-color: $white;
+                font-weight: 500;
+                border-radius: 4rem;
+                padding: 0 .7rem;
+                white-space: nowrap;
+                &:hover {
+                    color: $main !important;
+                }
+            }
+        }
     }
 }
 
@@ -457,6 +498,7 @@ section#studios {
 .actoren-list {
     .actor {
         border-top: 1px solid $main;
+        margin-bottom: 0;
         .actor-image-container {
             padding: $mrg/2 0;
             position: relative;
@@ -504,13 +546,14 @@ section#studios {
             .connections {
                 // display: none;
                 a {
+                    color: $main;
                     display: block;
                     &:before {
                         content:"->";
                         margin-right: .3ch;
                     }
                     &:hover {
-                        color: $blue;
+                        color: $grey !important;
                     }
                 }
             }
@@ -616,43 +659,81 @@ section#studios {
 
 /* Materiaal */
 section#materiaal {
-    .download-link {
-        display: inline-block;
-        background-color: $white;
-        border-radius: .5ch;
-        padding: $mrg/1.5;
-        &:after {
-            content:"";
-            color: $lightgrey;
-            margin-left: 1ch;
-        }
-        &:hover:after {
-            color: inherit;
+    .tools-list {
+        .tool {
+            border-top: 1px solid $main;
+            padding-top: $mrg/1.6;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 
+                "a b"
+                "c b";
+            h2 {
+                grid-area: a;
+            }
+            .tool-info {
+                grid-area: b;
+                margin-top: 0;
+                .running-text {
+                    margin-top: 0;
+                }
+            }
+            .tool-download {
+                grid-area: c;
+                margin-top: $mrg;
+                .download-link {
+                    display: inline-block;
+                    border-radius: .5ch;
+                    // line-height: 180%;
+                    color: $grey;
+                    &:before {
+                        content:"↓";
+                        margin-right: .5ch;
+                    }
+                }
+            }
         }
     }
 }
 
 /* Contact */
 section#contact {
-    // min-height: 50vh;
+    // padding-bottom: 0;
+    margin-bottom: $mrg;
+    aside {
+    }
     main {
-        // align-self: flex-start;
+        // height: calc(100vh - #{$mrg*1.7});
+        // align-items: stretch;
         display: flex;
         flex-direction: column;
-        
+        justify-content: space-between;
+        .contact-inner {
+            // background-color: wheat;
+        }
+        .colophon {
+            // background-color: white;
+        }
     }
 }
 
 /* Colophon */
 .colophon {
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     .running-text {
         width: 60%;
+        margin: 0;
+        p {
+            margin-bottom: 0;
+        }
     }
     .logos-container {
+        // background-color: red;
         .logo {
             display: inline-block;
             height: $mrg*2.5;

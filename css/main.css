@@ -84,17 +84,19 @@ h2 {
   font-weight: inherit;
 }
 
-a, a:visited {
-  color: #2C2C2C;
+a {
+  color: #7B7B7B;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
   text-decoration: none;
+}
+
+a:hover {
+  color: #2C2C2C !important;
 }
 
 .running-text a {
   color: #2C2C2C;
-  background-color: #FFFFFF;
-  border-radius: .7rem;
-  padding: 0 .3rem;
-  white-space: nowrap;
 }
 
 a[rel~="external"]:before {
@@ -129,6 +131,10 @@ div.running-text p {
   margin-top: 0;
 }
 
+div.running-text p:last-child {
+  margin-bottom: 0;
+}
+
 .aside-text {
   color: #7B7B7B;
   font-size: 1.4rem;
@@ -159,9 +165,32 @@ svg .st2 {
   fill: #0FBA78;
 }
 
+/* hacky: reverse */
+body.reverse section {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body.reverse section aside {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+body.reverse section main {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+body.reverse nav.main-nav {
+  right: 3rem;
+  left: inherit;
+  text-align: right;
+}
+
 /* Section layout */
 section {
-  min-height: 100vh;
   padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,6 +220,10 @@ section main h1 {
   margin-bottom: 4rem;
 }
 
+section main > div > div {
+  margin-bottom: 1.66667rem;
+}
+
 section:not(:last-child) {
   padding-bottom: 2rem;
   border-bottom: 1px solid #2C2C2C;
@@ -217,6 +250,10 @@ nav.main-nav ul {
 
 nav.main-nav ul li {
   list-style-type: none;
+}
+
+nav.main-nav ul li a {
+  color: #2C2C2C;
 }
 
 nav.main-nav ul li a.active {
@@ -384,6 +421,18 @@ section#over main h1 {
   min-height: 24vh;
 }
 
+section#over main .running-text a {
+  background-color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 4rem;
+  padding: 0 .7rem;
+  white-space: nowrap;
+}
+
+section#over main .running-text a:hover {
+  color: #2C2C2C !important;
+}
+
 /* Studios */
 section#studios main h1 {
   min-height: 24vh;
@@ -461,6 +510,7 @@ section#studios .studios-list .studio .studio-extra {
 /* Actoren */
 .actoren-list .actor {
   border-top: 1px solid #2C2C2C;
+  margin-bottom: 0;
 }
 
 .actoren-list .actor .actor-image-container {
@@ -513,6 +563,7 @@ section#studios .studios-list .studio .studio-extra {
 }
 
 .actoren-list .actor .actor-info .connections a {
+  color: #2C2C2C;
   display: block;
 }
 
@@ -522,7 +573,7 @@ section#studios .studios-list .studio .studio-extra {
 }
 
 .actoren-list .actor .actor-info .connections a:hover {
-  color: #1FA9D7;
+  color: #7B7B7B !important;
 }
 
 .actoren-list .actor:not(.selected) .actor-image-container {
@@ -604,7 +655,6 @@ section#studios .studios-list .studio .studio-extra {
 .actoren-list .actor.selected .actor-info .running-text {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: c;
   margin-top: 0.66667rem;
 }
@@ -612,6 +662,7 @@ section#studios .studios-list .studio .studio-extra {
 .actoren-list .actor.selected .actor-info .actor-extra {
   line-height: 180%;
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: b;
 }
@@ -632,24 +683,59 @@ section#studios .studios-list .studio .studio-extra {
 }
 
 /* Materiaal */
-section#materiaal .download-link {
+section#materiaal .tools-list .tool {
+  border-top: 1px solid #2C2C2C;
+  padding-top: 1.25rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+      grid-template-areas: "a b" "c b";
+}
+
+section#materiaal .tools-list .tool h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+section#materiaal .tools-list .tool .tool-info {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: b;
+  margin-top: 0;
+}
+
+section#materiaal .tools-list .tool .tool-info .running-text {
+  margin-top: 0;
+}
+
+section#materiaal .tools-list .tool .tool-download {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: c;
+  margin-top: 2rem;
+}
+
+section#materiaal .tools-list .tool .tool-download .download-link {
   display: inline-block;
-  background-color: #FFFFFF;
   border-radius: .5ch;
-  padding: 1.33333rem;
+  color: #7B7B7B;
 }
 
-section#materiaal .download-link:after {
-  content: "";
-  color: #D3D0CC;
-  margin-left: 1ch;
-}
-
-section#materiaal .download-link:hover:after {
-  color: inherit;
+section#materiaal .tools-list .tool .tool-download .download-link:before {
+  content: "↓";
+  margin-right: .5ch;
 }
 
 /* Contact */
+section#contact {
+  margin-bottom: 2rem;
+}
+
 section#contact main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -658,11 +744,13 @@ section#contact main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* Colophon */
 .colophon {
-  font-size: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,10 +761,18 @@ section#contact main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .colophon .running-text {
   width: 60%;
+  margin: 0;
+}
+
+.colophon .running-text p {
+  margin-bottom: 0;
 }
 
 .colophon .logos-container .logo {
