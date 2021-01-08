@@ -417,10 +417,6 @@ a[href="#contact"].active, .running-text a[href="#contact"] {
 
 /* Specific layouts per section */
 /* Over */
-section#over main h1 {
-  min-height: 24vh;
-}
-
 section#over main .running-text a {
   background-color: #FFFFFF;
   font-weight: 500;
@@ -434,10 +430,6 @@ section#over main .running-text a:hover {
 }
 
 /* Studios */
-section#studios main h1 {
-  min-height: 24vh;
-}
-
 section#studios .studios-nav {
   display: none;
 }
