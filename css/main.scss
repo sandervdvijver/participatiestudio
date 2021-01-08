@@ -4,13 +4,13 @@ $lh: 1.2;
 
 // Colors
 $main:#2C2C2C;
+$blue:#1FA9D7;
+$red:#EA4649;
+$green:#0FBA78;
 $grey:#7B7B7B;
 $lightgrey:#D3D0CC;
 $bg: #EEEEEE;
 $white:#FFFFFF;
-$green:#0FBA78;
-$red:#EA4649;
-$blue:#1FA9D7;
 
 // Breakpoints
 // Desktop
@@ -104,6 +104,11 @@ a, a:visited {
     // background-color: $white;
 }
 
+a[rel~="external"]:before {
+    content:"⎋";
+    margin-right: .5ch;
+}
+
 strong {
     font-weight: 500;
 }
@@ -160,6 +165,7 @@ svg {
 section {
     // background-color: rgba($blue,0.1);
     min-height: 100vh;
+    padding-top: $mrg;
     display: flex;
     aside {
         // background-color: rgba($red,0.1);
@@ -172,15 +178,21 @@ section {
     }
     main {
         // background-color: rgba($green,0.1);
-        padding-top: $mrg/1.2;
+        // padding-top: $mrg/1.2;
         width: 60%;
         align-self: flex-start;
         min-height: 100%;
         margin-left: $mrg/2;
         h1 {
-            margin-bottom: $mrg;
+            min-height: 24vh;
+            margin-bottom: $mrg*2;
         }
     }
+}
+
+section:not(:last-child){
+    padding-bottom: $mrg;
+    border-bottom: 1px solid $main;
 }
 
 /* Main nav */
@@ -333,6 +345,28 @@ nav.main-nav {
     }
 }
 
+/* Section and navigation link colors */
+a[href="#over"].active, .running-text a[href="#over"] {
+    color: $grey !important;
+    border-color: inherit !important;
+}
+a[href="#studios"].active, .running-text a[href="#studios"]{
+    color: $blue !important;
+    border-color: inherit !important;
+}
+a[href="#actoren"].active, .running-text a[href="#actoren"]{
+    color: $green !important;
+    border-color: inherit !important;
+}
+a[href="#materiaal"].active, .running-text a[href="#materiaal"]{
+    color: $red !important;
+    border-color: inherit !important;
+}
+a[href="#contact"].active, .running-text a[href="#contact"]{
+    color: $lightgrey !important;
+    border-color: inherit !important;
+}
+
 /* Specific layouts per section */
 
 /* Over */
@@ -342,7 +376,7 @@ section#over {
     }
     main {
         h1 {
-            min-height: 33.33vh;
+            min-height: 24vh;
         }
     }
 }
@@ -350,7 +384,7 @@ section#over {
 /* Studios */
 section#studios {
     main h1 {
-        min-height: 33.3vh;
+        min-height: 24vh;
     }
     .studios-nav {
         display: none;
@@ -400,11 +434,11 @@ section#studios {
             .studio-content {
                 grid-area: main;
                 margin-top: 0;
-                padding-bottom: $mrg;
+                // padding-bottom: $mrg;
             }
             .studio-extra {
                 grid-area: aside2;
-                padding-bottom: $mrg;
+                // padding-bottom: $mrg;
                 margin-bottom: $mrg;
                 align-self: end;
             }
@@ -416,40 +450,74 @@ section#studios {
 #actoren {
     main {
         h1 {
-            min-height: 33.33vh;
+            // min-height: 33.33vh;
         }
     }
 }
 .actoren-list {
     .actor {
         border-top: 1px solid $main;
-        .actor-image {
-            img {
+        .actor-image-container {
+            padding: $mrg/2 0;
+            position: relative;
+            .actor-image {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 101%;
+                border-radius: 100%;
+                overflow: hidden;
+                background-color: $lightgrey;
+                img {
+                    display: block;
+                    filter: grayscale(100%);
+                    mix-blend-mode: multiply;
+                    position: absolute;
+                    top: 0;
+                    width: 101%;
+                    height: 101%;
+                    object-fit: cover;
+                    &:hover {
+                        mix-blend-mode: normal;
+                        filter: none;
+                    }
+                }
+            }
+        }
+        .actor-info {
+            h2 {
+                line-height: 180%;
+                cursor: pointer;
+                &:after {
+                    color: $lightgrey;
+                    content:" ●";
+                    float: right;
+                }
+                &:hover {
+                    // color: $green;
+                    &:after {
+                        color: $green;
+                        // content:" ○";
+                    }
+                }
+            }
+            .connections {
                 // display: none;
-                width: 20px;
-                height: 20px;
-                background-color: $grey;
+                a {
+                    display: block;
+                    &:before {
+                        content:"->";
+                        margin-right: .3ch;
+                    }
+                    &:hover {
+                        color: $blue;
+                    }
+                }
             }
-        }
-        .actor-info h2 {
-            line-height: 150%;
-            cursor: pointer;
-            &:after {
-                color: $lightgrey;
-                content:" ○";
-                float: right;
-            }
-            &:hover:after {
-                // color: $main;
-                content:" ●";
-            }
-        }
-        .actor-info > div {
-            // display: none;
         }
     }
     .actor:not(.selected) {
-        .actor-image {
+        .actor-image-container {
             display: none;
         }
         .actor-info > div {
@@ -457,12 +525,93 @@ section#studios {
         }
     }
     .actor.selected {
-        .actor-info h2 {
-            &:after {
-                content:" −";
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: $mrg;
+        grid-template-areas: "main aside";
+        .actor-image-container {
+            width: 100%;
+            padding-bottom: 63%;
+            grid-area: aside;
+            justify-self: end;
+            position: relative;
+            .actor-image {
+                position: absolute;
+                right: 0;
+                width: 60%;
+                padding-bottom: 60%;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                background-color: $green;
+                display: block;
+                width: 60%;
+                height: 0;
+                padding-bottom: 60%;
+                border-radius: 100%;
+            }
+        }
+        .actor-info {
+            grid-area: main;
+            display: inline-grid;
+            grid-column-gap: $mrg;
+            grid-row-gap: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr;
+            grid-template-areas:
+                "a b"
+                "c c"
+                "d d";
+            h2 {
+                grid-area: a;
+                &:after {
+                    color: $bg;
+                    content:" ";
+                }
+                &:hover:after {
+                    color: $main;
+                }
+            }
+            .running-text {
+                grid-area: c;
+                margin-top: $mrg/3;
+            }
+            .actor-extra {
+                line-height: 180%;
+                grid-area: b;
+                a {
+                    color: $grey;
+                }
+            }
+            .connections {
+                grid-area: d;
+                // columns: 2;
+                // column-fill: auto;
+                // height: 100px;
+                // background-color: #fff;
+                align-self: end;
+                margin-bottom: $mrg/2.5;
             }
         }
     }
+    // .actor:nth-of-type(3n) {
+    //     .actor-image-container .actor-image {
+    //         // background-color: $red !important;
+    //     }
+    // }
+
+    // Possible variation in circle placement test
+    // .actor:nth-of-type(2n) {
+    //     .actor-image-container {
+    //         &:before {
+    //             right: 0;
+    //         }
+    //         .actor-image {
+    //             left: 0;
+    //         }
+    //     }
+    // }
 }
 
 /* Materiaal */
