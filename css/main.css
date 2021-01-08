@@ -751,6 +751,7 @@ section#contact main {
 
 /* Colophon */
 .colophon {
+  font-size: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
