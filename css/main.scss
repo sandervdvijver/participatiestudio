@@ -246,50 +246,10 @@ nav.main-nav {
     }
 }
 
-/* Small screens portrait */
-@media (orientation:portrait) and (max-width:$xs) {
-    main {
-        h1 {
-            font-size: 3.6rem;
-        }
-    }
-    nav.main-nav {
-        width: inherit;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        padding: $mrg;
-        line-height: 1.5;
-        background-color: none;
-        background: none;
-        font-size: 2.5rem;
-        ul {
-            li {
-                display: inline;
-                a {
-                    white-space: nowrap;
-                    background-color: $white;
-                    padding: 0 $mrg/2;
-                    border-radius: $mrg;
-                    text-decoration: none;
-                    &.active {
-                        border-bottom: none;
-                    }
-                }
-                a:active {
-                    background-color: $lightgrey;
-                    color: $main;
-                }
-            }
-        }
-    }
-}
-
 /* General media queries */
 
 /* Medium | 5 to 3 columns */
-@media screen and (max-width: $m) {
+@media (max-width: $m) {
     section {
         aside {
             width: 33.3%;
@@ -301,7 +261,7 @@ nav.main-nav {
 }
 
 /* Medium Landscape */
-@media screen and (orientation:landscape) and (max-height: $m) {
+@media (orientation:landscape) and (max-height: $m) {
     nav.main-nav {
         width: calc(33.3% - #{$mrg});
     }
@@ -312,7 +272,7 @@ nav.main-nav {
 }
 
 /* Medium Portrait */
-@media screen and (orientation:portrait) and (max-width: $m) {
+@media (orientation:portrait) and (max-width: $m) {
     section {
         flex-direction: column;
         aside {
@@ -336,7 +296,7 @@ nav.main-nav {
 }
 
 /* Small */
-@media screen and (max-width: $s) {
+@media (max-width: $s) {
     section {
         position: relative;
         aside {
@@ -404,8 +364,48 @@ nav.main-nav {
     }
 }
 
+/* Small screens portrait */
+@media (orientation:portrait) and (max-width:$xs) {
+    main {
+        h1 {
+            font-size: 3.6rem;
+        }
+    }
+    nav.main-nav {
+        width: 90vw;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: $mrg;
+        line-height: 1.5;
+        background-color: none;
+        background: none;
+        font-size: 2.5rem;
+        ul {
+            li {
+                display: inline;
+                a {
+                    white-space: nowrap;
+                    background-color: $white;
+                    padding: 0 $mrg/2;
+                    border-radius: $mrg;
+                    text-decoration: none;
+                    &.active {
+                        border-bottom: none;
+                    }
+                }
+                a:active {
+                    background-color: $lightgrey;
+                    color: $main;
+                }
+            }
+        }
+    }
+}
+
 /* Extra Small portrait */
-@media screen and (orientation:portrait) and (max-width: $xs) {
+@media (orientation:portrait) and (max-width: $xs) {
     section {
         display: block;
         aside, main {
@@ -434,7 +434,7 @@ nav.main-nav {
 }
 
 /* Extra extra Small Portrait */
-@media screen and (orientation:portrait) and (max-width: $xxs) {
+@media (orientation:portrait) and (max-width: $xxs) {
     section {
         main h1 {
             font-size: 4rem;
@@ -447,7 +447,7 @@ nav.main-nav {
 }
 
 /* Extra extra Small Landscape */
-@media screen and (orientation:landscape) and (max-height: $xxs) {
+@media (orientation:landscape) and (max-height: $xxs) {
     section {
         main h1 {
             font-size: 4rem;
