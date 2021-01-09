@@ -158,20 +158,15 @@ div.running-text {
 }
 
 /* SVG */
-svg {
-    display: block;
-    margin: 0;
-    padding: 0;
+.svg-container {
     width: 100%;
-    height: auto;
-    .st0{
-        fill:$blue;
-    }
-    .st1{
-        fill:$red;
-    }
-    .st2{
-        fill:$green;
+    // background-color: white;
+    padding-bottom: calc(100%/var(--ratio));
+    height: 0;
+    svg {
+        width: 100%;
+        height: auto;
+
     }
 }
 
@@ -325,6 +320,7 @@ nav.main-nav {
             justify-content: space-between;
             width: 66%;
             margin: 0;
+            padding-bottom: $mrg*1.5;
         }
         main {
             width: 100%;
