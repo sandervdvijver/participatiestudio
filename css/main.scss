@@ -24,8 +24,7 @@ $xs: 600px;
 $xxs: 400px;
 
 /* Typography */
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://rsms.me/inter/inter-display.css');
+@import url('../fonts/inter/inter.css');
 
 /* Main */
 html {
@@ -294,25 +293,53 @@ nav.main-nav {
 
 /* General media queries */
 
-/* 5 columns to 3 columns */
+/* Medium | 5 to 3 columns */
 @media screen and (max-width: $m) {
-    nav.main-nav {
-        width: calc(33.3% - #{$mrg});
-    }
     section {
         aside {
             width: 33.3%;
         }
         main {
-            padding-top: $mrg;
-            margin-top: $mrg*1.5 !important;
-            border-top: 1px solid $main;
             width: 66.6%;
         }
     }
 }
 
-/* Aside illustration aligns to bottom of screen */
+/* Medium Landscape */
+@media screen and (orientation:landscape) and (max-height: $m) {
+    nav.main-nav {
+        width: calc(33.3% - #{$mrg});
+    }
+    section {
+        main {
+        }
+    }
+}
+
+/* Medium Portrait */
+@media screen and (orientation:portrait) and (max-width: $m) {
+    section {
+        flex-direction: column;
+        aside {
+            display: flex;
+            justify-content: space-between;
+            width: 66%;
+            margin: 0;
+        }
+        main {
+            width: 100%;
+            margin: 0;
+            h1 {
+                min-height: inherit;
+            }
+        }
+    }
+    nav.main-nav {
+        width: calc(33.33vw - #{$mrg*2});
+    }
+}
+
+/* Small */
 @media screen and (max-width: $s) {
     section {
         position: relative;
@@ -320,34 +347,71 @@ nav.main-nav {
             display: flex;
             align-items: flex-end;
             // height: calc(100vh - #{$mrg*3});
-            padding-top: $mrg/2;
         }
         main {
-            // position: absolute;
-            // top: 0;
+            padding-top: $mrg;
         }
     }
 }
 
-@media screen and (orientation:landscape) and (max-width: $s) {
+/* Small lanscape */
+@media (max-width: $s) and (orientation:landscape) {
     section {
         flex-direction: column;
         aside {
             display: flex;
             justify-content: space-between;
             width: 66%;
-            
+            margin: 0;
+            padding-top: $mrg/2;
+        }
+        main {
+            width: 100%;
+            margin: 0;
+            margin-top: $mrg !important;
+            // border-top: 1px solid $lightgrey;
+        }
+    }
+    section#contact {
+        .colophon {
+            margin-bottom: $mrg;
+        }
+    }
+}
+
+/* Small portrait */
+@media (max-width: $s) and (orientation:portrait) {
+    section {
+        flex-direction: column;
+        aside {
+            display: flex;
+            justify-content: space-between;
+            width: 66%;
         }
         main {
             width: 100%;
             margin: 0;
         }
     }
+    section#contact {
+        .colophon {
+            padding-bottom: 20vh;
+            flex-direction: column;
+            .running-text {
+                width: 100%;
+                margin-bottom: $mrg;
+            }
+            .logos-container {
+                align-self: flex-start;
+            }
+        }
+    }
 }
 
+/* Extra Small portrait */
 @media screen and (orientation:portrait) and (max-width: $xs) {
     section {
-        display: initial;
+        display: block;
         aside, main {
             width: 100%;
             max-width: 100%;
@@ -355,18 +419,47 @@ nav.main-nav {
         }
         main {
             h1 {
-                margin-bottom: 0;
+                min-height: inherit;
+                margin-bottom: $mrg;
             }
         }
         aside {
+            padding-top: 15vh;
+            // height: 50vh;
             svg {
-                // width: 75%;
+                // width: 90%;
                 // margin: 0 auto;
             }
         }
     }
     nav.main-nav {
         max-width: 100%;
+    }
+}
+
+/* Extra extra Small Portrait */
+@media screen and (orientation:portrait) and (max-width: $xxs) {
+    section {
+        main h1 {
+            font-size: 4rem;
+            margin-bottom: $mrg*1.25;
+        }
+    }
+    nav.main-nav {
+        font-size: 2.2rem;
+    }
+}
+
+/* Extra extra Small Landscape */
+@media screen and (orientation:landscape) and (max-height: $xxs) {
+    section {
+        main h1 {
+            font-size: 4rem;
+            margin-bottom: $mrg*1.25;
+        }
+    }
+    nav.main-nav {
+        font-size: 2.2rem;
     }
 }
 

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* Typography */
-@import url("https://rsms.me/inter/inter.css");
-@import url("https://rsms.me/inter/inter-display.css");
+@import url("../fonts/inter/inter.css");
 /* Main */
 html {
   scroll-behavior: smooth;
@@ -293,23 +292,54 @@ nav.main-nav ul li a.active {
 }
 
 /* General media queries */
-/* 5 columns to 3 columns */
+/* Medium | 5 to 3 columns */
 @media screen and (max-width: 1050px) {
-  nav.main-nav {
-    width: calc(33.3% - 2rem);
-  }
   section aside {
     width: 33.3%;
   }
   section main {
-    padding-top: 2rem;
-    margin-top: 3rem !important;
-    border-top: 1px solid #2C2C2C;
     width: 66.6%;
   }
 }
 
-/* Aside illustration aligns to bottom of screen */
+/* Medium Landscape */
+@media screen and (orientation: landscape) and (max-height: 1050px) {
+  nav.main-nav {
+    width: calc(33.3% - 2rem);
+  }
+}
+
+/* Medium Portrait */
+@media screen and (orientation: portrait) and (max-width: 1050px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 66%;
+    margin: 0;
+  }
+  section main {
+    width: 100%;
+    margin: 0;
+  }
+  section main h1 {
+    min-height: inherit;
+  }
+  nav.main-nav {
+    width: calc(33.33vw - 4rem);
+  }
+}
+
+/* Small */
 @media screen and (max-width: 800px) {
   section {
     position: relative;
@@ -321,11 +351,43 @@ nav.main-nav ul li a.active {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-top: 1rem;
+  }
+  section main {
+    padding-top: 2rem;
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 800px) {
+/* Small lanscape */
+@media (max-width: 800px) and (orientation: landscape) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 66%;
+    margin: 0;
+    padding-top: 1rem;
+  }
+  section main {
+    width: 100%;
+    margin: 0;
+    margin-top: 2rem !important;
+  }
+  section#contact .colophon {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Small portrait */
+@media (max-width: 800px) and (orientation: portrait) {
   section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -345,11 +407,27 @@ nav.main-nav ul li a.active {
     width: 100%;
     margin: 0;
   }
+  section#contact .colophon {
+    padding-bottom: 20vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section#contact .colophon .running-text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  section#contact .colophon .logos-container {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
+/* Extra Small portrait */
 @media screen and (orientation: portrait) and (max-width: 600px) {
   section {
-    display: initial;
+    display: block;
   }
   section aside, section main {
     width: 100%;
@@ -357,10 +435,36 @@ nav.main-nav ul li a.active {
     margin: 0;
   }
   section main h1 {
-    margin-bottom: 0;
+    min-height: inherit;
+    margin-bottom: 2rem;
+  }
+  section aside {
+    padding-top: 15vh;
   }
   nav.main-nav {
     max-width: 100%;
+  }
+}
+
+/* Extra extra Small Portrait */
+@media screen and (orientation: portrait) and (max-width: 400px) {
+  section main h1 {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  nav.main-nav {
+    font-size: 2.2rem;
+  }
+}
+
+/* Extra extra Small Landscape */
+@media screen and (orientation: landscape) and (max-height: 400px) {
+  section main h1 {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  nav.main-nav {
+    font-size: 2.2rem;
   }
 }
 
