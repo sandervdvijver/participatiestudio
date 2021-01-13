@@ -166,14 +166,12 @@ div.running-text {
     svg {
         width: 100%;
         height: auto;
-
     }
 }
 
 /* Section layout */
 section {
     // background-color: rgba($blue,0.1);
-    // min-height: 100vh;
     padding-top: $mrg;
     display: flex;
     aside {
@@ -183,18 +181,24 @@ section {
         position: sticky;
         bottom: $mrg;
         width: 40%;
-        margin-right: $mrg/2;
+        margin-right: $mrg/1.25;
     }
     main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         // background-color: rgba($green,0.1);
         // padding-top: $mrg/1.2;
         width: 60%;
         align-self: stretch;
         // min-height: 100%;
-        margin-left: $mrg/2;
+        margin-left: $mrg/1.25;
         h1 {
             min-height: 24vh;
             margin-bottom: $mrg*2;
+        }
+        > div {
+            // background-color: #fff;
         }
         > div > div {
             margin-bottom: $mrg/1.2;
@@ -247,6 +251,11 @@ nav.main-nav {
 }
 
 /* General media queries */
+@media (orientation:landscape) {
+    section:not(#contact) {
+        min-height: calc(100vh - #{$mrg*2});
+    }
+}
 
 /* Medium | 5 to 3 columns */
 @media (max-width: $m) {
@@ -485,22 +494,42 @@ nav.main-nav {
 a[href="#over"].active, .running-text a[href="#over"]  {
     color: $grey !important;
     border-color: inherit !important;
-}
-a[href="#studios"].active, .running-text a[href="#studios"] {
-    color: $blue !important;
-    border-color: inherit !important;
-}
-a[href="#actoren"].active, .running-text a[href="#actoren"] {
-    color: $green !important;
-    border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $grey;
+        color: white !important;
+    }
 }
 a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
     color: $red !important;
     border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $red;
+        color: white !important;
+    }
+}
+a[href="#studios"].active, .running-text a[href="#studios"] {
+    color: $blue !important;
+    border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $blue;
+        color: white !important;
+    }
+}
+a[href="#actoren"].active, .running-text a[href="#actoren"] {
+    color: $green !important;
+    border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $green;
+        color: white !important;
+    }
 }
 a[href="#contact"].active, .running-text a[href="#contact"] {
-    color: $lightgrey !important;
+    color: $blue !important;
     border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $blue;
+        color: white !important;
+    }
 }
 
 /* Specific layouts per section */
@@ -818,9 +847,6 @@ section#contact {
     aside {
     }
     main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         .contact-inner {
         }
         .colophon {
