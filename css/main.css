@@ -504,37 +504,49 @@ nav.main-nav ul li a.active {
 
 /* Section and navigation link colors */
 a[href="#over"].active, .running-text a[href="#over"] {
-  color: #7B7B7B !important;
-  border-color: inherit !important;
-}
-
-@media (orientation: portrait) and (max-width: 600px) {
-  a[href="#over"].active, .running-text a[href="#over"] {
-    background-color: #7B7B7B;
-    color: white !important;
-  }
-}
-
-a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
   color: #EA4649 !important;
   border-color: inherit !important;
 }
 
 @media (orientation: portrait) and (max-width: 600px) {
-  a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
+  a[href="#over"].active, .running-text a[href="#over"] {
     background-color: #EA4649;
     color: white !important;
   }
 }
 
-a[href="#studios"].active, .running-text a[href="#studios"] {
+a[href="#aan-de-slag"].active, .running-text a[href="#aan-de-slag"] {
+  color: #0FBA78 !important;
+  border-color: inherit !important;
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+  a[href="#aan-de-slag"].active, .running-text a[href="#aan-de-slag"] {
+    background-color: #0FBA78;
+    color: white !important;
+  }
+}
+
+a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
   color: #1FA9D7 !important;
   border-color: inherit !important;
 }
 
 @media (orientation: portrait) and (max-width: 600px) {
-  a[href="#studios"].active, .running-text a[href="#studios"] {
+  a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
     background-color: #1FA9D7;
+    color: white !important;
+  }
+}
+
+a[href="#studios"].active, .running-text a[href="#studios"] {
+  color: #EA4649 !important;
+  border-color: inherit !important;
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+  a[href="#studios"].active, .running-text a[href="#studios"] {
+    background-color: #EA4649;
     color: white !important;
   }
 }

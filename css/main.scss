@@ -492,14 +492,6 @@ nav.main-nav {
 
 /* Section and navigation link colors */
 a[href="#over"].active, .running-text a[href="#over"]  {
-    color: $grey !important;
-    border-color: inherit !important;
-    @media (orientation:portrait) and (max-width:$xs) {
-        background-color: $grey;
-        color: white !important;
-    }
-}
-a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
     color: $red !important;
     border-color: inherit !important;
     @media (orientation:portrait) and (max-width:$xs) {
@@ -507,11 +499,27 @@ a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
         color: white !important;
     }
 }
-a[href="#studios"].active, .running-text a[href="#studios"] {
+a[href="#aan-de-slag"].active, .running-text a[href="#aan-de-slag"]  {
+    color: $green !important;
+    border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $green;
+        color: white !important;
+    }
+}
+a[href="#materiaal"].active, .running-text a[href="#materiaal"] {
     color: $blue !important;
     border-color: inherit !important;
     @media (orientation:portrait) and (max-width:$xs) {
         background-color: $blue;
+        color: white !important;
+    }
+}
+a[href="#studios"].active, .running-text a[href="#studios"] {
+    color: $red !important;
+    border-color: inherit !important;
+    @media (orientation:portrait) and (max-width:$xs) {
+        background-color: $red;
         color: white !important;
     }
 }
